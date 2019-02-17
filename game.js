@@ -14,9 +14,9 @@ $(document).keypress(function(e) {
 $(".btn").click(async function(e) {
   var userChosenColour = e.target.id;
   await userClickedPattern.push(userChosenColour);
-  await playSound(userChosenColour);
   await animatePress(userChosenColour);
   await checkAnswer(userClickedPattern.length - 1);
+  playSound(userChosenColour);
 });
 
 function checkAnswer(currentLevel) {
